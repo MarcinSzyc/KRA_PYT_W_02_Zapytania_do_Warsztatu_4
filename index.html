@@ -19,57 +19,72 @@
 <body>
 <div class="container">
     <div class="row mb-2">
-        <div class="col-md-8">
+        <div class="col-md-6">
             <div class="card flex-md-row mb-4 box-shadow h-md-250">
-                <div class="card-body d-flex flex-column align-items-start">
-                    <div class="container">
-                        <form class="json-form" action="" method="POST">
-                            <table class="table">
-                                <tr>
-                                    <td><input name="author" type="text">Author</td>
-                                </tr>
-                                <tr>
-                                    <td><input name="title" type="text">Title</td>
-                                </tr>
-                                <tr>
-                                    <td><input name="publisher" type="text">Publisher</td>
-                                </tr>
-                                <tr>
-                                    <td><input name="isbn" type="text">ISBN</td>
-                                </tr>
-                                <tr>
-                                    <td><input name="genre" type="text">Genre</td>
-                                </tr>
-                            </table>
-                            <button type="submit" data-type="POST" class="btn btn-secondary">Zapisz</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br>
-    <div class="row mb-2">
-        <div class="col-md-8">
-            <div class="card flex-md-row mb-4 box-shadow h-md-250">
-                <div class="card-body d-flex flex-column align-items-start">
-                    <div class="container">
-                        <table class="table">
-                            <thead>
+                <div class="card-body d-flex flex-column align-items-center">
+                    <form class="json-form" action="" method="POST">
+                        <table class="table-striped table-sm table-bordered">
                             <tr>
-                                <th>Autor</th>
-                                <th>Tytul</th>
+                                <td>Author</td>
+                                <td><input name="author" type="text"></td>
                             </tr>
-                            </thead>
-                            <tbody class="filled">
-
-                            </tbody>
+                            <tr>
+                                <td>Title</td>
+                                <td><input name="title" type="text"></td>
+                            </tr>
+                            <tr>
+                                <td>Publisher</td>
+                                <td><input name="publisher" type="text"></td>
+                            </tr>
+                            <tr>
+                                <td>ISBN</td>
+                                <td><input name="isbn" type="text"></td>
+                            </tr>
+                            <tr>
+                                <td>Genre</td>
+                                <td>
+                                    <select name="genre">
+                                        <option value="1">Romans</option>
+                                        <option value="2">Obyczajowa</option>
+                                        <option value="3">Sci-fi i fantasy</option>
+                                        <option value="4">Literatura faktu</option>
+                                        <option value="5">Popularnonaukowa</option>
+                                        <option value="6">Poradnik</option>
+                                        <option value="7">Kryminał, sensacja</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <button type="submit" data-type="POST" class="btn btn-secondary">Zapisz</button>
+                                </td>
+                            </tr>
                         </table>
-                    </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <table class="table-striped table-sm table-bordered">
+                        <thead>
+                        <tr>
+                            <th>Autor</th>
+                            <th>Tytul</th>
+                            <th>Akcja</th>
+                        </tr>
+                        </thead>
+                        <tbody class="filled">
+
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
 
 

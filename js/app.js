@@ -1,7 +1,7 @@
 // WERSJA 1
 // ZADANIE 1-6
 
-// $(function () {
+// $(document).ready(function() {
 //     // Wypelnianie HTML
 //
 //     function laduj() {
@@ -34,7 +34,7 @@
 //                             var lineToAdd = $(`<tr class="details">
 //                                                 <td colspan="2">ISBN: ${book.isbn} <br>
 //                                                 PUBLISHER: ${book.publisher}   <br>
-//                                                 GENRE: ${book.genre.}
+//                                                 GENRE: ${book.genre}
 //                                                 </td>
 //                                                 </tr>`);
 //                             clickedElement.closest("tr").after(lineToAdd)
@@ -60,7 +60,7 @@
 //         });
 //     }
 //
-//     laduj()
+//     laduj();
 //
 //     $("form").on( "submit", function( event ) {
 //         event.preventDefault();
@@ -75,7 +75,7 @@
 //         });
 // });
 
-//
+
 // --------------------------------------------------------------------------------------
 // WERSJA # 2
 // ZADANIE 7
@@ -95,6 +95,7 @@ $(function () {
             }
 
     }
+    $("tbody tr:odd").addClass("table-info")
 
     // Funkcja rozwijajaca menu
 
@@ -116,9 +117,9 @@ $(function () {
                     .done(function (book) {
 
                         var lineToAdd = $(`<tr class="details">
-                                            <td colspan="2">ISBN: ${book.isbn} <br>
-                                            PUBLISHER: ${book.publisher}   <br>                                             
-                                            </td>                                                
+                                            <td colspan="3">ISBN: ${book.isbn} <br>
+                                            PUBLISHER: ${book.publisher}   <br>
+                                            </td>
                                             </tr>`);
                         clickedElement.closest("tr").after(lineToAdd)
 
@@ -140,11 +141,11 @@ $(function () {
         let data_type = remove_item.data("type");
 
         remove_item.click(function () {
-             var delete_id = $(".delete").attr("id");
+             var delete_id = $(this).attr("id");
 
             ajax_querry(id=delete_id, type=data_type, data=undefined)
                 console.log("Delete poszlo")
-                location.reload()
+                $(this).closest('tr').remove()
             })
 
     }
